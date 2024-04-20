@@ -8,6 +8,7 @@ import {
 import Home from './pages/Home';
 import About from './pages/About';
 import MainLayout from './layout/MainLayout';
+import UpdateUser from './pages/UpdateUser';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         path:"/about",
         element:<About></About>,
         loader:()=>fetch("http://localhost:5000/users/")
+      },
+      {
+        path:"/updateUser/:id",
+        element:<UpdateUser></UpdateUser>,
+        loader:({params})=>fetch(`http://localhost:5000/users/${params.id}`)
       }
     ]
   },

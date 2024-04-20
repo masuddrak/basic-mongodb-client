@@ -4,6 +4,7 @@ const Navber = () => {
     const nav = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
+        {/* <li><NavLink to="/updateUser">Update User</NavLink></li> */}
     </>
     return (
         <div>
